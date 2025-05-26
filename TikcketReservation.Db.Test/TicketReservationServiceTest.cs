@@ -14,19 +14,19 @@ namespace TikcketReservation.Db.Test
     public class TicketReservationServiceTest
     {
         [Fact]
-        public void Should_Return_Available_Rooms()
+        public void Should_Return_Available_tickets()
         {
             //Arrange
             var date = new DateTime(2021, 06, 09);
 
             var dbOptions = new DbContextOptionsBuilder<TicketReservationDbContext>()
-                .UseInMemoryDatabase("AvailableRoomTest")
+                .UseInMemoryDatabase("AvailableticketTest")
                 .Options;
 
             using var context = new TicketReservationDbContext(dbOptions);
-            context.Add(new Reservation { Id = 1, Name = "Room 1" });
-            context.Add(new Reservation { Id = 2, Name = "Room 2" });
-            context.Add(new Reservation { Id = 3, Name = "Room 3" });
+            context.Add(new Reservation { Id = 1, Name = "ticket 1" });
+            context.Add(new Reservation { Id = 2, Name = "ticket 2" });
+            context.Add(new Reservation { Id = 3, Name = "ticket 3" });
 
             context.Add(new TicketReservation.Domain.TicketReservation { ReservationId = 1, Date = date });
             context.Add(new TicketReservation.Domain.TicketReservation { ReservationId = 2, Date = date.AddDays(-1) });
@@ -47,24 +47,24 @@ namespace TikcketReservation.Db.Test
 
 
         [Fact]
-        public void Should_Save_Room_Booking()
+        public void Should_Save_ticket_Booking()
         {
             var dbOptions = new DbContextOptionsBuilder<TicketReservationDbContext>()
                .UseInMemoryDatabase("ShouldSaveTest")
                .Options;
 
-            var roomBooking = new TicketReservation.Domain.TicketReservation { ReservationId = 1, Date = new DateTime(2021, 06, 09) };
+            var ticketBooking = new TicketReservation.Domain.TicketReservation { ReservationId = 1, Date = new DateTime(2021, 06, 09) };
 
 
             using var context = new TicketReservationDbContext(dbOptions);
-            var roomBookingService = new TicketReservationService(context);
-            roomBookingService.Save(roomBooking);
+            var ticketBookingService = new TicketReservationService(context);
+            ticketBookingService.Save(ticketBooking);
 
             var bookings = context.TicketReservation.ToList();
             var booking = Assert.Single(bookings);
 
-            Assert.Equal(roomBooking.Date, booking.Date);
-            Assert.Equal(roomBooking.ReservationId, booking.ReservationId);
+            Assert.Equal(ticketBooking.Date, booking.Date);
+            Assert.Equal(ticketBooking.ReservationId, booking.ReservationId);
         }
     }
 }

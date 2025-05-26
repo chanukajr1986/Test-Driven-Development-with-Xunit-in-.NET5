@@ -40,7 +40,7 @@ namespace TicketReservation.Core.Tests
         }
 
         [Fact]
-        public void Should_Return_Room_Booking_Response_With_Request_Values()
+        public void Should_Return_ticket_Booking_Response_With_Request_Values()
         {
             //Act
             TicketReservationResult result = _processor.ReserveTicket(_request);
@@ -61,7 +61,7 @@ namespace TicketReservation.Core.Tests
         }
 
         [Fact]
-        public void Should_Save_Room_Booking_Request()
+        public void Should_Save_ticket_Booking_Request()
         {
             TicketReservation.Domain.TicketReservation savedReservation = null;
             _ticketReservationServiceMock.Setup(q => q.Save(It.IsAny<TicketReservation.Domain.TicketReservation>()))
@@ -82,7 +82,7 @@ namespace TicketReservation.Core.Tests
         }
 
         [Fact]
-        public void Should_Not_Save_Room_Booking_Request_If_None_Available()
+        public void Should_Not_Save_ticket_Booking_Request_If_None_Available()
         {
             _availableTickets.Clear();
             _processor.ReserveTicket(_request);
@@ -108,7 +108,7 @@ namespace TicketReservation.Core.Tests
         [Theory]
         [InlineData(1, true)]
         [InlineData(null, false)]
-        public void Should_Return_RoomBookingId_In_Result(int? ticketBookingId, bool isAvailable)
+        public void Should_Return_ticketBookingId_In_Result(int? ticketBookingId, bool isAvailable)
         {
             if (!isAvailable)
             {

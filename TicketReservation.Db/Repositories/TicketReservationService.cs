@@ -22,9 +22,9 @@ namespace TicketReservation.Db.Repositories
             return _context.Reservation.Where(q => !q.TicketReservations.Any(x => x.Date == date)).ToList();
         }
 
-        public void Save(Domain.TicketReservation roomBooking)
+        public void Save(Domain.TicketReservation ticketBooking)
         {
-            _context.Add(roomBooking);
+            _context.Add(ticketBooking);
             _context.SaveChanges();
         }
 
