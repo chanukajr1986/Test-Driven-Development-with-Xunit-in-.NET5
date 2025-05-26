@@ -37,7 +37,7 @@ namespace TicketReservation.API.Test
         public async Task Should_Call_Booking_Method_When_Valid(int expectedMethodCalls, bool isModelValid,
             Type expectedActionResultType, ReservationResultFlag bookingResultFlag)
         {
-            // Arrange code
+            // Arrange
             if (!isModelValid)
             {
                 _controller.ModelState.AddModelError("Key", "ErrorMessage");
