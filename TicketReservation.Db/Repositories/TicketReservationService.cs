@@ -27,5 +27,10 @@ namespace TicketReservation.Db.Repositories
             _context.Add(roomBooking);
             _context.SaveChanges();
         }
+
+        public IEnumerable<Reservation> GetTickets()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

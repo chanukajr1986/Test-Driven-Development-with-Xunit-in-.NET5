@@ -7,7 +7,7 @@ using TicketReservation.Domain.BaseModels;
 
 namespace TicketReservation.Core.Requests
 {
-    public class TicketReservationRequeestProcessor
+    public class TicketReservationRequeestProcessor : ITicketReservationRequeestProcessor
     {
         private readonly ITicketReservationService _ticketReservationService;
 

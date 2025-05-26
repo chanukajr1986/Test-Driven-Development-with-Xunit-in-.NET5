@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.13.35919.96 d17.13
+VisualStudioVersion = 17.13.35919.96
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TicketReservation.Core.Tests", "TicketReservation.Core.Tests\TicketReservation.Core.Tests.csproj", "{3DAF273A-D8E9-4542-B203-596B57C24224}"
 EndProject
@@ -12,6 +12,10 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TikcketReservation.Db.Test", "TikcketReservation.Db.Test\TikcketReservation.Db.Test.csproj", "{B8A4F5F4-BBA8-46DF-9D03-CAF9295C7946}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TicketReservation.Db", "TicketReservation.Db\TicketReservation.Db.csproj", "{2BEC77CE-6E1B-4A97-A164-1ED4771F9E3C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TicketReservation.API", "TicketReservation.API\TicketReservation.API.csproj", "{8C004E74-2241-4965-A939-36FD4DA461B0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TicketReservation.API.Test", "TicketReservation.API.Test\TicketReservation.API.Test.csproj", "{4877D123-F174-4884-9773-206F78AF9231}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +43,14 @@ Global
 		{2BEC77CE-6E1B-4A97-A164-1ED4771F9E3C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2BEC77CE-6E1B-4A97-A164-1ED4771F9E3C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2BEC77CE-6E1B-4A97-A164-1ED4771F9E3C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8C004E74-2241-4965-A939-36FD4DA461B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8C004E74-2241-4965-A939-36FD4DA461B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8C004E74-2241-4965-A939-36FD4DA461B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8C004E74-2241-4965-A939-36FD4DA461B0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4877D123-F174-4884-9773-206F78AF9231}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4877D123-F174-4884-9773-206F78AF9231}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4877D123-F174-4884-9773-206F78AF9231}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4877D123-F174-4884-9773-206F78AF9231}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -24,9 +24,9 @@ namespace TicketReservation.Db
             base.OnModelCreating(modelBuilder);
 
             modelBuilder.Entity<Reservation>().HasData(
-                new Reservation { Id = 1, Name = "Conference Room A" },
-                new Reservation { Id = 2, Name = "Conference Room B" },
-                new Reservation { Id = 3, Name = "Conference Room C" }
+                new Reservation { Id = 1, Name = "Name 1" },
+                new Reservation { Id = 2, Name = "Name 2" },
+                new Reservation { Id = 3, Name = "Name 3" }
             );
         }
     }

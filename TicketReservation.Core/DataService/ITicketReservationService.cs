@@ -9,5 +9,7 @@ namespace TicketReservation.Core.DataService
         void Save(TicketReservation.Domain.TicketReservation ticketReservation);
 
         IEnumerable<Reservation> GetAvailableTickets(DateTime date);
+
+        IEnumerable<Reservation> GetTickets();
     }
 }
